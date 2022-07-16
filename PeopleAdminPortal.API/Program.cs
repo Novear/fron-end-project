@@ -1,4 +1,23 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
+using PeopleAdminPortal.API.Models;
+using PeopleAdminPortal.API.Profiles;
+using PeopleAdminPortal.API.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<PersonAdminContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PersonAdminPortalDb")));
+builder.Services.AddScoped<IPersonRepository, PersonRepository>();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "PersonAdminPortal.API", Version = "v1" });
+});
+var config = new AutoMapper.MapperConfiguration(cfg =>
+{
+    cfg.AddProfile(new AutoMapperProfile());
+});
+var mapper = config.CreateMapper();
+builder.Services.AddSingleton(mapper);
 
 // Add services to the container.
 
