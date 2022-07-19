@@ -11,7 +11,7 @@ builder.Services.AddCors((options) =>
 {
     options.AddPolicy("ngClient", (builder) =>
     {
-        builder.WithOrigins("http://localhost:63723")
+        builder.WithOrigins("http://localhost:50882")
         .AllowAnyHeader()
         .WithMethods("GET", "POST", "PUT", "DELETE")
         .WithExposedHeaders("*");
