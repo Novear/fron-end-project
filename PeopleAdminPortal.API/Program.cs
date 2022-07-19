@@ -4,10 +4,26 @@ using PeopleAdminPortal.API.Models;
 using PeopleAdminPortal.API.Profiles;
 using PeopleAdminPortal.API.Repositories;
 
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddCors((options) =>
+{
+    options.AddPolicy("ngClient", (builder) =>
+    {
+        builder.WithOrigins("http://localhost:63723")
+        .AllowAnyHeader()
+        .WithMethods("GET", "POST", "PUT", "DELETE")
+        .WithExposedHeaders("*");
+    });
+
+});
+
 builder.Services.AddDbContext<PersonAdminContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("PersonAdminPortalDb")));
+
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
+builder.Services.AddTransient<IGenderRepository, GenderRepository>();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "PersonAdminPortal.API", Version = "v1" });
@@ -36,6 +52,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseRouting();
+app.UseCors("ngClient");
 
 app.UseAuthorization();
 
