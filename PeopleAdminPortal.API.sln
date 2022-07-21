@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeopleAdminPortal.API", "PeopleAdminPortal.API\PeopleAdminPortal.API.csproj", "{0CFEC7BE-C949-42F3-A248-3F9ABFC8D9E8}"
 EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "PeopleAdminPortal.APP", "PeopleAdminPortal.APP\PeopleAdminPortal.APP.esproj", "{B28C11D4-C9D3-4296-9689-DB541C1476F3}"
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "PeopleAdminPortal.APP", "PeopleAdminPortal.APP\PeopleAdminPortal.APP.esproj", "{893FCF91-1F7C-46DE-A9E6-71061FF7C39A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +17,12 @@ Global
 		{0CFEC7BE-C949-42F3-A248-3F9ABFC8D9E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CFEC7BE-C949-42F3-A248-3F9ABFC8D9E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CFEC7BE-C949-42F3-A248-3F9ABFC8D9E8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B28C11D4-C9D3-4296-9689-DB541C1476F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B28C11D4-C9D3-4296-9689-DB541C1476F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B28C11D4-C9D3-4296-9689-DB541C1476F3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{B28C11D4-C9D3-4296-9689-DB541C1476F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B28C11D4-C9D3-4296-9689-DB541C1476F3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B28C11D4-C9D3-4296-9689-DB541C1476F3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{893FCF91-1F7C-46DE-A9E6-71061FF7C39A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{893FCF91-1F7C-46DE-A9E6-71061FF7C39A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{893FCF91-1F7C-46DE-A9E6-71061FF7C39A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{893FCF91-1F7C-46DE-A9E6-71061FF7C39A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{893FCF91-1F7C-46DE-A9E6-71061FF7C39A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{893FCF91-1F7C-46DE-A9E6-71061FF7C39A}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
